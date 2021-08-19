@@ -11,27 +11,27 @@ API.getWorkoutsInRange()
   //Function that sets the colour pallete of the graphs
   function generatePalette() {
     const arr = [
-    "#ff71ce",
-    "#01cdfe",
-    "#05ffa1",
-    "#b967ff",
-    "#fffb96",
-    "#7fffd4",
-    "#0000ff",
-    "#ff7f24",
-    "#006400",
-    "#ff1493",
-    "#ff4040",
-    "#8ee5ee",
-    "#7fff00",
-    "#bf3eff",
+    "#999999",
+    "#777777",
+    "#555555",
+    "#333333",
+    "#111111",
+    "#343d46",
+    "#4f5b66",
+    "#65737e",
+    "#a7adba",
+    "#c0c5ce",
+    "#6e7f80",
+    "#536872",
+    "#708090",
+    "#536878",
   ]
   return arr;
   }
 //Function to populate the charts with the data that is passed into it
 function populateChart(data) {
   let durations = duration(data);
-  let pounds = calculateTotalWeight(data);
+  let kilograms = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -55,8 +55,8 @@ function populateChart(data) {
       datasets: [
         {
           label: "Workout Duration In Minutes",
-          backgroundColor: "red",
-          borderColor: "red",
+          backgroundColor: "black",
+          borderColor: "#536878",
           data: durations,
           fill: false
         }
@@ -102,23 +102,25 @@ function populateChart(data) {
       ],
       datasets: [
         {
-          label: "Pounds",
-          data: pounds,
+          label: "Kilograms",
+          data: kilograms,
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
-            "rgba(153, 102, 255, 0.2)",
-            "rgba(255, 159, 64, 0.2)"
+            "rgba(153,153,153)",
+            "rgba	(119,119,119)",
+            "rgba(85,85,85)",
+            "rgba(51,51,51)",
+            "rgba	(17,17,17)",
+            "rgba(167,173,186)",
+            "rgba(192,197,206)"
           ],
           borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)"
+            "rgba(153,153,153)",
+            "rgba	(119,119,119)",
+            "rgba(85,85,85)",
+            "rgba(51,51,51)",
+            "rgba	(17,17,17)",
+            "rgba(167,173,186)",
+            "rgba(192,197,206)"
           ],
           borderWidth: 1
         }
@@ -127,7 +129,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "Pounds Lifted"
+        text: "Kilograms Lifted"
       },
       scales: {
         yAxes: [
@@ -169,7 +171,7 @@ function populateChart(data) {
         {
           label: "Excercises Performed",
           backgroundColor: colors,
-          data: pounds
+          data: kilograms
         }
       ]
     },

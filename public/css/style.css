@@ -17,12 +17,51 @@ body {
 }
 
 nav {
-  background-color: #5793fd;
-  color: #ffffff;
+  background-color: #2e2828 !important;
+  color: #ffffff !important;
   height: 80px;
   padding: 10px;
   line-height: 3;
   font-size: 1.2rem;
+}
+
+.ui.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  background: #fff;
+  font-weight: 400;
+  border: 1px solid rgba(34,36,38,.15);
+  -webkit-box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  border-radius: .28571429rem;
+  min-height: 2.85714286em;
+}
+
+.ui.menu .item {
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: 0 0;
+  padding: .92857143em 1.14285714em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: 400;
+  -webkit-transition: background .1s ease,color .1s ease,-webkit-box-shadow .1s ease;
+  transition: background .1s ease,color .1s ease,-webkit-box-shadow .1s ease;
+  transition: background .1s ease,box-shadow .1s ease,color .1s ease;
+  transition: background .1s ease,box-shadow .1s ease,color .1s ease,-webkit-box-shadow .1s ease;
 }
 
 a,
