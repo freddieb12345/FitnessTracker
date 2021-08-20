@@ -49,7 +49,7 @@ Running npm run seed allows you to have a prepopulated database.
 
 1. Homepage displaying last workout
 
-![Site](public/assets/homepage.png)
+![Site](public/assets/homepage.PNG)
 
 2. Creating Workouts
 
@@ -58,7 +58,7 @@ Running npm run seed allows you to have a prepopulated database.
 
 3. Last Week's Summary
 
-![Site](public/assets/dashboard.png)
+![Site](public/assets/dashboard.PNG)
 
 ### Snippets
 
@@ -101,7 +101,7 @@ Running npm run seed allows you to have a prepopulated database.
     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/-CSS-blue?style=for-the-badge" alt="CSS" /></a>
     <a href="https://www.javascript.com/"><img src="https://img.shields.io/badge/-Javascript-yellow?style=for-the-badge" alt="Javascript" /></a>
     <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Bootstrap-blueviolet?style=for-the-badge" alt="Bootstrap" /></a>
-    <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Semantic-blueviolet?style=for-the-badge" alt="Semantic" /></a>
+    <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/-Semantic-blueviolet?style=for-the-badge" alt="Bootstrap" /></a>
     <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/-Node-orange?style=for-the-badge" alt="Node" /></a>
     <a href="https://www.npmjs.com/package/express"><img src="https://img.shields.io/badge/-Express-blue?style=for-the-badge" alt="Express" /></a>
     <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/-MongoDB-blue?style=for-the-badge" alt="MongoDB" /></a>
