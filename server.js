@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-
+require('dotenv').config()
 
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
