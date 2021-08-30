@@ -28,64 +28,53 @@ Keep track of all your workouts for the week using Fitness Tracker. Fitness trac
     * [Snippets](#snippets)
 * [Credits](#credits)
 * [License](#license)
+* [Live Link](https://stark-woodland-99025.herokuapp.com/?id=6123ccd49fa2ee0016fed818)
 
 ## Installation
 
 1. Clone repository. 
-2. Check in routes/api-routes and comment in block of code if you want the database to be prepopulated with dummy values
 3. npm install
 4. node server.js
 
 Running npm run seed allows you to have a prepopulated database.
 
-<!-- <p align="center">
-    <a href="https://track-your-fitness.herokuapp.com/"><img src="https://img.shields.io/badge/-👉 See Live Site-success?style=for-the-badge"  alt="Live Site" /></a>
-</p> -->
-
-
 ## Usage
 
 ### Screeshots
 
-1. Homepage displaying last workout
-
-![Site](public/assets/homepage.PNG)
-
-2. Creating Workouts
-
-![Site](public/assets/walkthrough.gif)
-
-
-3. Last Week's Summary
+1. Dashboard displaying transaction table and graph
 
 ![Site](public/assets/dashboard.PNG)
 
+2. Adding and subtracting funds
+
+![Site](public/assets/walkthrough.gif)
+
 ### Snippets
 
-
-1. Adding to an array type
+1. Populating the table
 
 ```javascript
 
-    //API function to add an exercise
-    app.put("/api/workouts/:id", (req, res) => {
+        //Function to populate the table
+        function populateTable() {
+        let tbody = document.querySelector("#tbody");
+        tbody.innerHTML = "";
 
-        db.Workout.findOneAndUpdate(
-            { _id: req.params.id },
-            {
-                $inc: { totalDuration: req.body.duration },
-                $push: { exercises: req.body }
-            },
-            { new: true }).then(dbWorkout => {
-                res.json(dbWorkout);
-            }).catch(err => {
-                res.json(err);
-            });
+        transactions.forEach(transaction => {
+            // create and populate a table row
+            let tr = document.createElement("tr");
+            tr.innerHTML = `
+            <td>${transaction.name}</td>
+            <td>${transaction.value}</td>
+            `;
 
-    });
+            tbody.appendChild(tr);
+        });
+        };
     
 ```
-* The above function adds an exercise to the exercise array that has the spcific id from the current workout and update the specific fields within the workout. It also will add the duration of the exercise to the total duration of the workout.
+* The above function populates the table with the transaction created by the user.
 
 ## Credits
 
